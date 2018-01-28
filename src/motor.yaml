@@ -1,0 +1,259 @@
+head_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: head_joint
+    joint_speed: 0.5
+    motor:
+        id: 20
+        init: 0
+        min: 1810
+        max: 2390
+        
+neck_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: neck_joint
+    joint_speed: 0.5
+    motor:
+        id: 19
+        init: 0
+        min: 1050
+        max: 3050
+
+right_shoulder_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: right_shoulder_joint
+    joint_speed: 0.5
+    motor:
+        id: 1
+        init: 0
+        min: 1000
+        max: 4040
+
+left_shoulder_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: left_shoulder_joint
+    joint_speed: 0.5
+    motor:
+        id: 2
+        init: 0
+        min: 60
+        max: 3010
+
+right_elbow_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: right_elbow_joint
+    joint_speed: 0.5
+    motor:
+        id: 3
+        init: 0
+        min: 1660
+        max: 2780
+
+left_elbow_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: left_elbow_joint
+    joint_speed: 0.5
+    motor:
+        id: 4
+        init: 0
+        min: 1270
+        max: 2420
+
+right_hand_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: right_hand_joint
+    joint_speed: 0.5
+    motor:
+        id: 5
+        init: 0
+        min: 1050
+        max: 1903
+
+left_hand_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: left_hand_joint
+    joint_speed: 0.5
+    motor:
+        id: 6
+        init: 0
+        min: 2060
+        max: 3030
+
+right_hip_turn_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: right_hip_turn_joint
+    joint_speed: 0.5
+    motor:
+        id: 7
+        init: 0
+        min: 1827
+        max: 2620
+        
+left_hip_turn_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: left_hip_turn_joint
+    joint_speed: 0.5
+    motor:
+        id: 8
+        init: 0
+        min: 1400
+        max: 2320
+        
+right_hip_shake_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: right_hip_shake_joint
+    joint_speed: 0.5
+    motor:
+        id: 9
+        init: 0
+        min: 1110
+        max: 2130
+        
+left_hip_shake_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: left_hip_shake_joint
+    joint_speed: 0.5
+    motor:
+        id: 10
+        init: 0
+        min: 1890
+        max: 3000
+        
+right_hip_bend_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: right_hip_bend_joint
+    joint_speed: 0.5
+    motor:
+        id: 11
+        init: 0
+        min: 1020
+        max: 2320
+        
+left_hip_bend_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: left_hip_bend_joint
+    joint_speed: 0.5
+    motor:
+        id: 12
+        init: 0
+        min: 1760
+        max: 3000
+        
+right_knee_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: right_knee_joint
+    joint_speed: 0.5
+    motor:
+        id: 13
+        init: 0
+        min: 1920
+        max: 3300
+        
+left_knee_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: left_knee_joint
+    joint_speed: 0.5
+    motor:
+        id: 14
+        init: 0
+        min: 950
+        max: 2170
+        
+right_ankle_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: right_ankle_joint
+    joint_speed: 0.5
+    motor:
+        id: 15
+        init: 0
+        min: 1550
+        max: 2900
+        
+left_ankle_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: left_ankle_joint
+    joint_speed: 0.5
+    motor:
+        id: 16
+        init: 0
+        min: 1320
+        max: 2670
+        
+right_foot_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: right_foot_joint
+    joint_speed: 0.5
+    motor:
+        id: 17
+        init: 0
+        min: 1460
+        max: 2410
+        
+left_foot_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: left_foot_joint
+    joint_speed: 0.5
+    motor:
+        id: 18
+        init: 0
+        min: 1670
+        max: 2650
