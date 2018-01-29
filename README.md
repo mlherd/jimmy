@@ -1,5 +1,8 @@
 # ros_jimmy
 
+Wiki Page
+- https://github.com/mlherd/ros_jimmy/wiki
+
 Hardware:
 - USB2Dynamixel
 - Powerhub
