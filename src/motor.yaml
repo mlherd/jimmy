@@ -4,7 +4,7 @@ head_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: head_joint
-    joint_speed: 0.5
+    joint_speed: 1
     motor:
         id: 20
         init: 0
@@ -17,7 +17,7 @@ neck_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: neck_joint
-    joint_speed: 0.5
+    joint_speed: 1
     motor:
         id: 19
         init: 0
@@ -30,7 +30,7 @@ right_shoulder_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: right_shoulder_joint
-    joint_speed: 0.5
+    joint_speed: 0.7
     motor:
         id: 1
         init: 0
@@ -43,7 +43,7 @@ left_shoulder_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: left_shoulder_joint
-    joint_speed: 0.5
+    joint_speed: 0.7
     motor:
         id: 2
         init: 0
@@ -56,7 +56,7 @@ right_elbow_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: right_elbow_joint
-    joint_speed: 0.5
+    joint_speed: 0.7
     motor:
         id: 3
         init: 0
@@ -69,7 +69,7 @@ left_elbow_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: left_elbow_joint
-    joint_speed: 0.5
+    joint_speed: 0.7
     motor:
         id: 4
         init: 0
@@ -82,7 +82,7 @@ right_hand_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: right_hand_joint
-    joint_speed: 0.5
+    joint_speed: 0.7
     motor:
         id: 5
         init: 0
@@ -95,7 +95,7 @@ left_hand_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: left_hand_joint
-    joint_speed: 0.5
+    joint_speed: 0.7
     motor:
         id: 6
         init: 0
@@ -160,7 +160,7 @@ right_hip_bend_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: right_hip_bend_joint
-    joint_speed: 0.5
+    joint_speed: 0.1
     motor:
         id: 11
         init: 0
@@ -173,12 +173,12 @@ left_hip_bend_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: left_hip_bend_joint
-    joint_speed: 0.5
+    joint_speed: 0.1
     motor:
         id: 12
         init: 0
         min: 1760
-        max: 3000
+        max: 3300
         
 right_knee_controller:
     controller:
@@ -186,12 +186,12 @@ right_knee_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: right_knee_joint
-    joint_speed: 0.5
+    joint_speed: 0.3
     motor:
         id: 13
         init: 0
         min: 1920
-        max: 3300
+        max: 3500
         
 left_knee_controller:
     controller:
@@ -199,12 +199,12 @@ left_knee_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: left_knee_joint
-    joint_speed: 0.5
+    joint_speed: 0.3
     motor:
         id: 14
         init: 0
-        min: 950
-        max: 2170
+        min: 620
+        max: 2300
         
 right_ankle_controller:
     controller:
@@ -212,11 +212,11 @@ right_ankle_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: right_ankle_joint
-    joint_speed: 0.5
+    joint_speed: 0.2
     motor:
         id: 15
         init: 0
-        min: 1550
+        min: 1300
         max: 2900
         
 left_ankle_controller:
@@ -225,11 +225,11 @@ left_ankle_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: left_ankle_joint
-    joint_speed: 0.5
+    joint_speed: 0.2
     motor:
         id: 16
         init: 0
-        min: 1320
+        min: 1200
         max: 2670
         
 right_foot_controller:

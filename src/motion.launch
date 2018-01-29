@@ -1,0 +1,5 @@
+<launch>
+	<node name="motion_saver" pkg="jimmy" type="motion_saver.py" output="screen" />
+	<node name="motion_player" pkg="jimmy" type="motion_player.py" output="screen" />
+	<node name="keyboard" pkg="keyboard" type="keyboard" output="screen" />
+</launch>
