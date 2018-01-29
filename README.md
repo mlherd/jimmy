@@ -10,7 +10,7 @@ Hardware:
 - HROS5
 
 Pre-Install:
-- Operating System: Linux 14.04
+- Operating System: Linux Ubuntu 14.04
 - ROS Distribution: ROS Indigo
 - Make sure dynamixel_controllers package is successfully installed
 - Make sure USB port is available/accessible.
