@@ -1,0 +1,74 @@
+<launch>
+	<node name="dynamixel_manager" pkg="dynamixel_controllers" type="controller_manager.py" required="true" output="screen">
+        <rosparam>
+            namespace: dxl_manager
+            serial_ports:
+                pan_tilt_port:
+                    port_name: "/dev/ttyUSB0"
+                    baud_rate: 1000000
+                    min_motor_id: 1
+                    max_motor_id: 21
+                    update_rate: 20
+        </rosparam>
+    </node>
+
+<!-- Start tilt joint controller -->
+    <rosparam file="$(find jimmy)/src/motor.yaml" command="load"/>
+    <node name="controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port pan_tilt_port
+				head_controller
+                neck_controller
+				right_shoulder_controller
+				left_shoulder_controller
+				right_elbow_controller
+				left_elbow_controller
+				right_hand_controller
+				left_hand_controller
+				right_hip_shake_controller
+				left_hip_shake_controller
+				right_hip_turn_controller
+				left_hip_turn_controller
+				right_hip_bend_controller
+				left_hip_bend_controller
+				right_knee_controller
+				left_knee_controller
+				right_ankle_controller
+				left_ankle_controller
+				right_foot_controller
+				left_foot_controller
+				"
+          output="screen"/>
+          
+<!-- Start joints trajectory controller controller -->
+    <rosparam file="$(find jimmy)/src/jtc.yaml" command="load"/>
+    <node name="controller_spawner_meta" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --type=meta
+                head_controller
+				neck_controller
+				right_shoulder_controller
+				left_shoulder_controller
+				right_elbow_controller
+				left_elbow_controller
+				right_hand_controller
+				left_hand_controller
+				right_hip_shake_controller
+				left_hip_shake_controller
+				right_hip_turn_controller
+				left_hip_turn_controller
+				right_hip_bend_controller
+				left_hip_bend_controller
+				right_knee_controller
+				left_knee_controller
+				right_ankle_controller
+				left_ankle_controller
+				right_foot_controller
+				left_foot_controller
+				"
+		  output="screen"/>
+	
+	<node name="motion_saver" pkg="jimmy" type="motion_saver.py" output="screen" launch-prefix="xterm -e"/>
+	<node name="motion_player" pkg="jimmy" type="motion_player.py" output="screen" launch-prefix="xterm -e"/>
+	<node name="keyboard" pkg="keyboard" type="keyboard"/>
+</launch>
