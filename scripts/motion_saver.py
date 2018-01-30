@@ -208,7 +208,7 @@ def keyboard_capture(data):
 			service18(1)
 			service19(1)
 			service20(1)
-			enabled = 1
+			all_enabled = 1
 			print "torque is enabled"
 		
 		# disable all servos
