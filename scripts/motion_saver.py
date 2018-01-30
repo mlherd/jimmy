@@ -20,8 +20,10 @@ global left_arm_enabled
 global right_arm_enabled
 global head_enabled
 global part
+global motion_counter
 
 # initial values for global variables
+motion_counter = 0
 all_enabled = 1
 head_enabled = 1
 left_arm_enabled = 1
@@ -50,6 +52,7 @@ def keyboard_capture(data):
 	global left_arm_enabled
 	global right_arm_enabled
 	global head_enabled
+	global motion_counter
 	
 	button = data.code
 
@@ -99,6 +102,16 @@ def keyboard_capture(data):
 	if button == 101 and edit !=1:
 		
 		os.system('cls' if os.name == 'nt' else 'clear')
+		
+		homedir = os.environ['HOME']
+		motion_directory = homedir + "/catkin_ws/src/jimmy/motions/"
+		
+		print "Your motions:"
+		for root, dirs, files in os.walk(motion_directory):
+			for f in files:
+				if f.endswith(".txt"):
+					print "- " + str(os.path.join(f))
+			
 		name = ""
 		name = raw_input("What motion do you want to edit?: ")
 		if name == "none":
@@ -133,7 +146,8 @@ def keyboard_capture(data):
 		new_line = new_line + str(delay)
 		new_line = new_line + "\n"
 		file.write(new_line)
-		print "new motion is added"
+		motion_counter = motion_counter + 1
+		print str(motion_counter) + "new motion is added"
 		print "press on 'a' to add a new motion frame press c to save exit and the motion file."
 		button = 0
 		
@@ -145,6 +159,7 @@ def keyboard_capture(data):
 		print "file is closed"
 		edit = 0
 		button = 0
+		motion_counter = 0
 					
 	# press on "t" to exit a motion file
 	if button == 116 and edit != 1:
@@ -393,12 +408,12 @@ def head_callback(data):
 def motion_control():
 	
 	os.system('cls' if os.name == 'nt' else 'clear')
-	print "motion saver v1.0 - main menu"
+	print "motion editor v1.0 - main menu"
 	print "- n = create a new motion file"
 	print "- e = edit a motion file"
 	print "- c = save and exit editting a motion file"
 	print "- t = enable/disable all servos"
-	print "- y = enable disable a body part"
+	print "- y = enable/disable a body part"
 	print "- p = play a motion file"
 	print "- h = help"
 	
