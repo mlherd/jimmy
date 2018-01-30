@@ -38,3 +38,5 @@ Topics
 - /play_motion (std_msgs/String)
 - Motion file name. For example:
 - rostopic pub -1 /play_motion std_msgs/String stand
+
+Portland State University - Intelligent Robotics Lab - email: herdogan@pdx.edu
