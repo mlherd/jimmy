@@ -70,5 +70,6 @@
 	
 	<node name="motion_saver" pkg="jimmy" type="motion_saver.py" output="screen" launch-prefix="xterm -e"/>
 	<node name="motion_player" pkg="jimmy" type="motion_player.py" output="screen" launch-prefix="xterm -e"/>
+	<node name="joint_mapper" pkg="jimmy" type="joint_states2motor_states.py" output="screen" launch-prefix="xterm -e"/>
 	<node name="keyboard" pkg="keyboard" type="keyboard"/>
 </launch>
