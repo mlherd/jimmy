@@ -4,7 +4,7 @@ head_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: head_joint
-    joint_speed: 2
+    joint_speed: 1
     motor:
         id: 20
         init: 0
@@ -17,7 +17,7 @@ neck_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: neck_joint
-    joint_speed: 2
+    joint_speed: 1
     motor:
         id: 19
         init: 0
